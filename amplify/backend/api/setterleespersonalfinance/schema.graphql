@@ -1,0 +1,42 @@
+type Config @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  precision: Int
+  currencyFactor: Int
+}
+
+enum AccountType {
+  BANK
+  CREDIT_CARD
+}
+
+type Transaction @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  accountID: ID! @index(name: "byAccount")
+  budgetID: ID! @index(name: "byBudget")
+  description: String
+  amount: Float!
+  date: AWSDate!
+}
+
+type Account @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  Transactions: [Transaction] @hasMany(indexName: "byAccount", fields: ["id"])
+  name: String!
+  type: AccountType!
+  balance: Float
+}
+
+type Budget @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  BudgetDetails: [BudgetDetail] @hasMany(indexName: "byBudget", fields: ["id"])
+  Transactions: [BudgetDetail] @hasMany(indexName: "byBudget", fields: ["id"])
+  name: String!
+  isDebt: Boolean
+}
+
+type BudgetDetail @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  budgetID: ID! @index(name: "byBudget")
+  description: String!
+}
+ 

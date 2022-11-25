@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-setterleespersonalfi-staging-132028-authRole",
+      "UnauthRoleArn": "arn:aws:iam::639421175353:role/amplify-setterleespersonalfi-staging-132028-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::639421175353:role/amplify-setterleespersonalfi-staging-132028-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-setterleespersonalfi-staging-132028-deployment",
+      "UnauthRoleName": "amplify-setterleespersonalfi-staging-132028-unauthRole",
+      "StackName": "amplify-setterleespersonalfi-staging-132028",
+      "StackId": "arn:aws:cloudformation:us-east-1:639421175353:stack/amplify-setterleespersonalfi-staging-132028/1b7ca230-641f-11ed-a2e7-125c664fd427",
+      "AmplifyAppId": "d110fl2vv2hnx3"
+    },
+    "categories": {
+      "auth": {
+        "setterleespersonalfinance": {}
+      }
+    }
+  }
+}

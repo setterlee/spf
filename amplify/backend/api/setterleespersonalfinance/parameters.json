@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "setterleespersonalfinance",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authsetterleespersonalfinance",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-11-17T14:54:15.562Z"
+}
